@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name = "author" content = "Danish Fathurrahman">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Shop</title>
+
+        <link href="css/index.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+        <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+            }
+        }
+
+        input[type=button] {
+            background-color: #147bf1;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type=button]:hover {
+            background-color: #0667d6;
+        }
+
+        @media screen and (max-width: 600px) {
+            .column, input[type=button] {
+                width: 100%;
+                margin-top: 0;
+            }
+        }
+
+        input[type=reset] {
+            background-color: #147bf1;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type=reset]:hover {
+            background-color: #0667d6;
+        }
+
+        @media screen and (max-width: 600px) {
+            .column, input[type=reset] {
+                width: 100%;
+                margin-top: 0;
+            }
+        }
+        </style>
+    </head>
+
+    <body id="body1">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+            <a class="navbar-brand" href="index.html">Fragrance</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutus.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contactus.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop.html">Shop</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <br><br><br><br>
+
+        <center>
+
+        <div>
+            <img src="img/s.png" class="img-fluid">
+        </div>
+
+        <br><br>
+
+        <form>
+            <div class="container">
+                <div class="row">
+                   <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img-top" src="img/p1.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h4 class="card-title">Victoria's Secret Noir Tease</h4>
+                                <b><i>PRE-ORDER</i></b>
+                                <p><b>RM75</b></p>
+                                <p>Quantity: <input type="text" id="QtyA"></p>
+                                <p>Total: RM<i id="TotalA"></i></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img-top" src="img/p2.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h4 class="card-title">Emporio Armani Because It's You</h4>
+                                <b><i>PRE-ORDER</i></b>
+                                <p><b>RM165</b></p>
+                                <p>Quantity: <input type="text" id="QtyB"></p>
+                                <p>Total: RM<i id="TotalB"></i></p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img-top" src="img/p3.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h4 class="card-title">Chanel Eau De Parfum</h4>
+                                <b><i>PRE-ORDER</i></b>
+                            <p><b>RM200</b></p>
+                            <p>Quantity: <input type="text" id="QtyC"></p>
+                            <p>Total: RM<i id="TotalC"></i></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br><br>
+
+            <div class="container">
+                <div class="card">
+                    <div class="card-body">
+                        <p>Grand Total: RM<i id="orderNow"></i></p>
+                        <input type="button" value="ORDER NOW">
+                        <br><br>
+                        <input type="reset" value="Reset">
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        </center>
+
+        <script>
+            var qtyBoxA = document.getElementById('QtyA');
+            var qtyBoxB = document.getElementById('QtyB');
+            var qtyBoxC = document.getElementById('QtyC');
+
+            var totBoxA = document.getElementById('TotalA');
+            var totBoxB = document.getElementById('TotalB');
+            var totBoxC = document.getElementById('TotalC');
+
+
+            var grandTot = document.getElementById('orderNow');
+            var btnGetTot = document.querySelector("input[type=button]");
+            var btnReset = document.querySelector("input[type=reset]");
+
+
+            qtyBoxA.addEventListener("change", calc);
+            qtyBoxB.addEventListener("change", calc);
+            qtyBoxC.addEventListener("change", calc);
+            btnGetTot.addEventListener("click", orderNow);
+            btnReset.addEventListener("click", reset);
+
+            var gt = null; // Will hold the grand total
+
+            function calc() {
+
+              var priceA = 75;
+              var priceB = 165;
+              var priceC = 200;
+
+              gt = 0;
+
+
+              var qtyA = parseInt(qtyBoxA.value, 10);
+              var qtyB = parseInt(qtyBoxB.value, 10);
+              var qtyC = parseInt(qtyBoxC.value, 10);
+
+              if (!isNaN(qtyA)) { totBoxA.textContent = qtyA * priceA; gt += +totBoxA.textContent; }
+              if (!isNaN(qtyB)) { totBoxB.textContent = qtyB * priceB; gt += +totBoxB.textContent; }
+              if (!isNaN(qtyC)) { totBoxC.textContent = qtyC * priceC; gt += +totBoxC.textContent; }
+
+              grandTot.textContent = gt.toFixed(2);
+
+            }
+
+            function orderNow(){
+              calc();
+
+              alert("Thank You For Purchased!" + "\nYour Total Order: RM " + gt);
+            }
+
+            function reset(){
+
+              totBoxA.textContent = "";
+              totBoxB.textContent = "";
+              totBoxC.textContent = "";
+              grandTot.textContent = "";
+            }
+          </script>
+    </body>
+</html>

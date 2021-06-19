@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name = "author" content = "Danish Fathurrahman">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Home</title>
+
+    <link href="css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+</head>
+<body id="body1">
+
+<nav class="navbar navbar-expand-md navbar-dark fixed-top">
+   <a class="navbar-brand" href="index.html">Fragrance</a>
+   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+   <span class="navbar-toggler-icon"></span>
+   </button>
+   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+       <li class="nav-item active">
+           <a class="nav-link" href="index.html">Home</a>
+       </li>
+       <li class="nav-item">
+           <a class="nav-link" href="blog.html">Blog</a>
+       </li>
+       <li class="nav-item">
+          <a class="nav-link" href="aboutus.html">About Us</a>
+       </li>
+       <li class="nav-item">
+         <a class="nav-link" href="contactus.html">Contact Us</a>
+       </li>
+       <li class="nav-item">
+         <a class="nav-link" href="shop.html">Shop</a>
+       </li>
+      </ul>
+   </div>
+ </nav>
+
+ <br><br>
+
+ <center>
+  <div class="jumbotron p-4 p-md-5 text-white rounded bg-transparent">
+    <img src="img/welcome.png" class="img-fluid">
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="w3-content w3-section" style="max-width:350px">
+        <p align=center><b>PRE-ORDER NOW!</b></p>
+        <img class="mySlides w3-animate-fading" src="img/p1.jpg" style="width: 100%;">
+        <img class="mySlides w3-animate-fading" src="img/p2.jpg" style="width: 100%">
+        <img class="mySlides w3-animate-fading" src="img/p3.jpg" style="width: 100%">
+      </div>
+    </div>
+  </div>
+
+  <br><br><br>
+
+    <div class="text-white bg-dark">
+        <h4>"Fragrance is <i>the art</i></h4>
+        <h4>that makes <i>memory speak"</i></h4>
+    </div>
+
+    <br><br><br>
+
+    <footer class="container">
+        <p>FRAGRANCE &copy; 2021 &middot;<a>Fragrance Shop</a></p>
+    </footer>
+
+</center>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap4.4.1.js"></script>
+
+    <script>
+      var myIndex = 0;
+      carousel();
+
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}
+        x[myIndex-1].style.display = "block";
+        setTimeout(carousel, 9000);
+      }
+      </script>
+
+  </body>
+</html>

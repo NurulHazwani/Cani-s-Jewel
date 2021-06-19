@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name = "author" content = "Danish Fathurrahman">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Contact Us</title>
+
+        <link href="css/index.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+        <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+
+    </head>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Style inputs */
+        input[type=text], select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+
+        input[type=submit] {
+            background-color: #147bf1;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #0667d6;
+        }
+
+        /* Style the container/contact section */
+        .container {
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 30px;
+        }
+
+        /* Create two columns that float next to eachother */
+        .column {
+            float: left;
+            width: 50%;
+            margin-top: 6px;
+            padding: 20px;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+            .column, input[type=submit] {
+                width: 100%;
+                margin-top: 0;
+            }
+        }
+    </style>
+
+    <body id="body1">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+        <a class="navbar-brand" href="index.html">Fragrance</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="blog.html">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="aboutus.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contactus.html">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="shop.html">Shop</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <br><br><br><br>
+
+        <center>
+        <div class="title2">
+            <img src="img/cu.png" class="img-fluid">
+            <p class="text-white"><i>Contact: 0149952334</i></p>
+            <p class="text-white">Swing by to our shop, or leave us a message:</p>
+        </div>
+        </center>
+
+        <div class="container">
+            <div class="row">
+              <div class="column">
+                <div id='map' style='width: 500px; height: 623px;' class="img-fluid"></div>
+                    <script>
+                        mapboxgl.accessToken = 'pk.eyJ1Ijoid2VpamllNjk2NiIsImEiOiJja3B0aHV2emQwZGsxMnBvYWY3dHVja2ZnIn0.EFR-ZDLET1IwMm1KuNnTjQ';
+                        var map = new mapboxgl.Map({
+                            container: 'map',
+                            style: 'mapbox://styles/mapbox/streets-v11',
+                            center: [41, 21],
+                            zoom: 3
+                        });
+                    </script>
+              </div>
+
+              <div class="column text-white">
+                <form>
+                  <label for="fname">First Name</label>
+                  <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+                  <label for="lname">Last Name</label>
+                  <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+                  <label for="email">Email</label>
+                  <input type="text" id="email" name="email" placeholder="Your email..">
+
+                  <label for="address">Address</label>
+                  <input type="text" id="adress" name="Address" placeholder="Your address..">
+
+                  <label for="subject">Subject</label>
+                  <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+                  <input type="submit" value="Submit" onclick="button()">
+
+                  <script>
+                      function button(){
+                        confirm("Your Message Has Been Submitted!");
+                      }
+                    </script>
+                </form>
+              </div>
+            </div>
+          </div>
+    </body>
+</html>
